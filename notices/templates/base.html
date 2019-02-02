@@ -1,0 +1,46 @@
+{% load staticfiles%}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Notice Mania</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static "css/bootstrap.min.css" %}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static "css/style.css" %}"/>
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark" style="background-color:blueviolet; padding-top:0%;">
+            <a class="navbar-brand" href="#">                
+                <img class="img-fluid" src="" alt="NoticeMania">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+            aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarNavDropdown username" class="navbar-collapse collapse justify-content-end">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" style=>
+                        <!--<a class="nav-link" href="#" style=" color:white;">Login</a>-->
+                        <div style="color: white;"><a href="{% url "login" %}" style="color:white;">{% block login %} {% endblock %}</a> / <a href="{% url "register" %}" style="color:white;">{% block register %}{% endblock %}</a></div>
+                        <div style="color: white"><a href="#">{% block logout%}{% endblock %}</a></div>
+                        <div><a href="#" style="color: white;">{% block username %} {% endblock %}</a></div>
+                    </li>
+                    <li class="nav-item" >                                
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    {% block title %} {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+    
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/jquery.min.js" %}"></script>
+</body>
+</html>

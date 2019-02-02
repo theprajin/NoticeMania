@@ -1,0 +1,14 @@
+section.main-body div.self-notices {
+    background-color: aquamarine;
+    
+}
+
+section.main-body div.others-section{
+    margin-top: 10px;
+}
+
+section.main-body div.others-notices {
+    margin-bottom: 10px;
+    border: 2px solid blueviolet;
+    border-radius: 5px;
+}
